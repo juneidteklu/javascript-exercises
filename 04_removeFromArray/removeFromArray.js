@@ -1,9 +1,20 @@
-const removeFromArray = function(array, removedElement) {
+function removeFromArray(givenArray, someNumber){
 
-    let newArray = array.filter((element) => element != removedElement); /*maybe instead of element != removedELement, it needs to check each array element of removedELement. Because right now, I think its saying that removedELement is all one unit when it needs to see each number of that array as its own unit. */
-    return newArray;
 
-};
+
+    
+    if (givenArray.indexOf(someNumber) >= 0){
+        givenArray.splice(givenArray.indexOf(someNumber),1);
+        return givenArray;
+    }
+    else return givenArray;
+
+
+
+
+
+
+}
 
 // Do not edit below this line
 module.exports = removeFromArray;
